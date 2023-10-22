@@ -13,7 +13,7 @@ I used the SFTP command-line tool to connect to the remote sandbox environment p
 sftp my_username@hostname
 ```
 
-Replace `my_username` with your actual username and `hostname` with the provided server address.
+Replace `my_username` with your actual username and `hostname` with the provided server address, press `Enter` and then input your password.
 
 ## Step 4: Navigating to the Destination Directory
 After connecting, I was in my home directory on the remote server. I used the `cd` command to navigate to the directory where I wanted to upload the screenshots:

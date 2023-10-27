@@ -30,7 +30,7 @@ fi
 # Function to start the process
 start_process() {
         ./manage_my_process &
-        echo "$$" | sudo tee "$PID_FILE"
+        echo "$$" > "$PID_FILE"
         echo "manage_my_process started"
 }
 

@@ -1,3 +1,4 @@
+# Install and configure Nginx with Puppet.
 package { 'nginx':
   ensure => 'installed',
 }
@@ -23,7 +24,7 @@ file { '/etc/nginx/sites-available/default':
     }
 
     location = /redirect_me {
-        return 301 https://www.example.com/; # Replace with your desired redirect URL
+        return 301 https://www.google.com/;
     }
 
     error_page 404 /404.html;

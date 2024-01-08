@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Configures a new Ubuntu machine to install and configure HAProxy
+# Configures new Ubuntu machine to install and configure HAProxy
 
 sudo apt-get -y update
 sudo apt-get install --no-install-recommends software-properties-common -y

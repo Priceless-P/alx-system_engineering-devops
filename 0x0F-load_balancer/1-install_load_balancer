@@ -22,4 +22,4 @@ printf %s "
     server 90394-web-02 52.87.219.193:80 check
 " | sudo tee /etc/haproxy/haproxy.cfg > dev/null
 
-service haproxy start
+sudo service haproxy start

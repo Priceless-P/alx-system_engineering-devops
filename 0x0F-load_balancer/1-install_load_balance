@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Configures a new Ubuntu machine to install and configure HAProxy
+
+sudo apt-get -y update
+sudo apt-get install --no-install-recommends software-properties-common -y
+sudo add-apt-repository ppa:vbernat/haproxy-2.0 -y
+sudo apt-get install haproxy=2.0.\* -y
+
+echo "ENABLED=1" | sudo tee /etc/default/haproxy > /dev/null
+sudo mv /etc/haproxy/haproxy.cfg{,.original}
+sudo touch /etc/haproxy/haproxy.cfg
+printf %s "
+  frontend haproxy
+      bind *:80
+      mode http
+      default_backend web_servers
+
+  backend web_servers
+    mode http
+    balance roundrobin
+    server 90394-web-01 52.201.221.134:80 check
+    server 90394-web-02 52.87.219.193:80 check
+" | sudo tee /etc/haproxy/haproxy.cfg > dev/null
+
+service haproxy start

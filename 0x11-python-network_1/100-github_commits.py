@@ -12,7 +12,7 @@ owner = sys.argv[2]
 url = "https://api.github.com/repos/{}/{}/commits".format(owner, repo)
 header = {
     'Accept': "application/vnd.github+json",
-    'Authorization': "Bearer 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",
+    'Authorization': "Bearer <Token>",
     'X-GitHub-Api-Version': "2022-11-28"
 }
 params = {'per_page': 10}

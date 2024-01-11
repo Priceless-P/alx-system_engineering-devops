@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Display information about subdomains.
+
+display_info() {
+    domain=$1
+    subdomain=$2
+
+    dig_info=$(dig $subdomain.$domain | awk '/ANSWER SECTION/ {getline; print}')
+    record_type=$(echo "$dig_info" | awk '{print $4}')
+    destination=$(echo "$dig_info" | awk '{print $5}')
+    echo "The subdomain $subdomain is a $record_type record and points to $destination"
+}
+
+if [ $# -eq 1 ]; then
+    display_info priscacreations.tech $1
+    display_info priscacreations.tech www
+    display_info priscacreations.tech lb-01
+    display_info priscacreations.tech web-01
+    display_info priscacreations.tech web-02
+elif [ $# -eq 2 ]; then
+    display_info $2 $1
+else
+    echo "Usage $0 <domain> [subdomain]"
+    exit 1
+fi

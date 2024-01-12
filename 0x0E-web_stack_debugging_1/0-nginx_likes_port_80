@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Makes sure Nginx is running on port 80
+
+cd /etc/nginx/sites-enabled/ || exit;
+rm default
+sudo ln -s /etc/nginx/sites-available/default default
+sudo service nginx restart

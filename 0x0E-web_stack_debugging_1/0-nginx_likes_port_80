@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Makes sure Nginx is running on port 80
+# Makes sure that Nginx is running on port 80
 
 rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default

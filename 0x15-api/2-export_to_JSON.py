@@ -37,17 +37,15 @@ def fetch_employee_todo_progress(employee_id):
 
 
 def write_to_json_file(employee_id, employee_name, todo_data, json_file):
-    """Writes to a json file with ordered tasks"""
+    """Writes to a json file"""
     try:
-        user_tasks = {str(employee_id): []}
+        user_tasks = {employee_id: []}
         for res in todo_data:
-            task_entry = {
+            user_tasks[employee_id].append({
                 "task": res.get('title'),
-                "completed": str(res.get('completed')),
+                "completed": res.get('completed'),
                 "username": employee_name
-            }
-            user_tasks[str(employee_id)].append(task_entry)
-
+            })
         with open(json_file, 'w') as f:
             json.dump(user_tasks, f)
     except requests.exceptions.RequestException as e:

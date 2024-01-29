@@ -29,7 +29,7 @@ def get_employee_todo_progress(employee_id):
 
         for res in todo_response:
             if res.get('completed'):
-                print("\t{}".format(res.get('title')))
+                print("\t {}".format(res.get('title')))
     except requests.exceptions as e:
         print("Error occurred: e".format(e))
         exit(1)

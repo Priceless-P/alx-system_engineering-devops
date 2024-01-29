@@ -1,3 +1,7 @@
+ #!/usr/bin/python3
+"""
+Fetches employees todo details from an api
+"""
 import json
 import requests
 

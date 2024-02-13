@@ -2,8 +2,8 @@
 """
  Top Ten
 """
-import requests
 from markupsafe import escape
+import requests
 
 
 def top_ten(subreddit):

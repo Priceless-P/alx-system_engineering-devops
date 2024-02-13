@@ -2,8 +2,8 @@
 """
 Recurse it!
 """
-import requests
 from markupsafe import escape
+import requests
 
 
 def recurse(subreddit, hot_list=[], after="", count=0):

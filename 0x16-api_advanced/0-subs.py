@@ -2,8 +2,8 @@
 """
  How many subs?
 """
-import requests
 from markupsafe import escape
+import requests
 
 
 def number_of_subscribers(subreddit):

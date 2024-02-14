@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
- Top Ten
+Top Ten
+This function prints hot posts on a given Reddit subreddit.
 """
 from markupsafe import escape
 import requests

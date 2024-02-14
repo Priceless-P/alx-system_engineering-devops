@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
 Recurse it!
+This function queries a list of all
+hot posts on a given Reddit subreddit.
 """
 from markupsafe import escape
 import requests

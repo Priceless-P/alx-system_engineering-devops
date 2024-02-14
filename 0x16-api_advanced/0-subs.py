@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-"""
-How many subs?
-This function queries subscribers on a given Reddit subreddit
-"""
+"""How many subs?
+This function queries subscribers on a given Reddit subreddit"""
 from markupsafe import escape
 import requests
 

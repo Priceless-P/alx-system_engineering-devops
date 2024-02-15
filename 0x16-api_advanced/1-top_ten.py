@@ -3,7 +3,6 @@
 Top Ten
 This function prints hot posts on a given Reddit subreddit.
 """
-from markupsafe import escape
 import requests
 
 
@@ -12,7 +11,7 @@ def top_ten(subreddit):
     of the first 10 hot posts listed for a given subreddit
     """
 
-    url = "https://www.reddit.com/r/{}/hot.json".format(escape(subreddit))
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {
         "User-Agent": "AppleWebKit:0x16.api.advanced:v1.0.0 \
                        (by /u/JazzlikeFig4018)"

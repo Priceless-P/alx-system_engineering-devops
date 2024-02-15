@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """How many subs?
 This function queries subscribers on a given Reddit subreddit"""
-from markupsafe import escape
 import requests
 
 
@@ -9,7 +8,7 @@ def number_of_subscribers(subreddit):
     """Queries the Reddit API and returns
     the number of subscribers"""
 
-    url = "https://www.reddit.com/r/{}/about.json".format(escape(subreddit))
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {
         "User-Agent": "AppleWebKit:0x16.api.advanced:v1.0.0 \
                        (by /u/JazzlikeFig4018)"
